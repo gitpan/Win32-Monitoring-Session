@@ -29,7 +29,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
 our @EXPORT = qw();
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 bootstrap Win32::Monitoring::Session $VERSION;
 
@@ -58,10 +58,10 @@ __END__
 
 =head1 NAME
 
-Win32::Monitoring::Session - Find some information on the logon session
+Win32::Monitoring::Session - Get information on the logon session
 
 =head1 SYNOPSIS
-   
+
    use Win32::Monitoring::Session qw(GetLogonSessionData GetLogonSessionId);
    my $sessionid = GetLogonSessionId($$);
    my $info = GetLogonSessionData($sessionid);
@@ -70,7 +70,7 @@ Win32::Monitoring::Session - Find some information on the logon session
 =head1 DESCRIPTION
 
 The Win32::Monitoring::Session module provides an interface to query Windows
-for additional session Information. Most notably the exact logon time which
+for additional session information. Most notably the exact logon time which
 seems to be rather difficult to get a hold of more or less portable way.
 
 Note that windows seems to treat this kind of information as privileged. As
@@ -95,13 +95,15 @@ The following keys are returned if there is appropriate information available.
  AuthenticationPackage 
  LogonTime (seconds since 1970 unix time format)
 
+=back
+
 =head1 SEE ALSO
 
 Webpage: <http://oss.oetiker.ch/optools/>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2008 by OETIKER+PARTNER AG. All rights reserved.
+Copyright (c) 2008, 2009 by OETIKER+PARTNER AG. All rights reserved.
 
 =head1 LICENSE
 

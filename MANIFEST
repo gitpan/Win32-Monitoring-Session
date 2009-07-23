@@ -8,4 +8,3 @@ Session.xs
 ppport.h
 t/Win32-Monitoring-Session.t
 typemap
-META.yml                                 Module meta-data (added by MakeMaker)
