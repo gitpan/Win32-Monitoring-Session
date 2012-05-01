@@ -1,5 +1,9 @@
 Revision history for Perl extension Win32::Monitoring::Session.
 
+Win32-Monitoring-Session-0.04, Wed 2012-05-01
+---------------------------------------------
+- Make working with automated up- and download
+
 Win32-Monitoring-Session-0.03, Wed 2012-05-01
 ---------------------------------------------
 - Make this work for compilations on mingw
