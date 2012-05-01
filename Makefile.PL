@@ -19,14 +19,12 @@ WriteMakefile(
     NAME              => 'Win32::Monitoring::Session',
     VERSION_FROM      => 'Session.pm', # finds $VERSION
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
-    ($] >= 5.005 ?       ## Add these new keywords supported since 5.005
-      (ABSTRACT_FROM  => 'Session.pm', # retrieve abstract from module
-       AUTHOR         => 'Roman Plessl (rplessl at cpan dot org)'
-    ) : ()),
+    ABSTRACT_FROM     => 'Session.pm', # retrieve abstract from module
+    AUTHOR            => 'Roman Plessl (rplessl at cpan dot org)',
     INC               => '-I.', # e.g., '-I. -I/usr/include/other',
     CCFLAGS           => $CCFLAGS,
     OPTIMIZE          => $OPTIMIZE,
-    LIBS              => ':nodefault :nosearch kernel32.lib user32.lib secur32.lib libcmt.lib',
+    LIBS              => [':nosearch -luser32 -lsecur32 -lmsvcrt'],
     # Un-comment this if you add C files to link with later:
     # OBJECT          => '$(O_FILES)', # link all the C files too
 );

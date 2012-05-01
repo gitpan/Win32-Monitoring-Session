@@ -41,11 +41,11 @@
    }
 
 #define ExtractSessionData(ENTRY) \
-    if ((sessionData-> ## ENTRY ## ).Buffer != NULL) \
+    if ((sessionData->ENTRY).Buffer != NULL) \
     { \
-        usBuffer = (sessionData-> ## ENTRY ## ).Buffer; \
-        usLength = (sessionData-> ## ENTRY ## ).Length; \
-        if (usLength < 256) { \
+        usBuffer = (sessionData->ENTRY).Buffer; \
+        usLength = (sessionData->ENTRY).Length; \
+        if (usLength < (long)256) { \
             char* MBString = NULL; \
             wcsncpy_s(buffer, 256, usBuffer, usLength); \
             wcscat_s(buffer, 256, L""); \

@@ -1,0 +1,26 @@
+Index: Session.pm
+===================================================================
+--- Session.pm	(revision 164)
++++ Session.pm	(working copy)
+@@ -70,10 +70,10 @@
+ =head1 DESCRIPTION
+ 
+ The Win32::Monitoring::Session module provides an interface to query Windows
+-for additional session Information. Most noteably the exact logon time which
++for additional session Information. Most notably the exact logon time which
+ seems to be rather difficult to get a hold of more or less portable way.
+ 
+-Note that windows sems to treat this kind of information as priviledged. As
++Note that windows seems to treat this kind of information as privileged. As
+ a normal user you can only get information about your own processes and your
+ own session. Admin will be better of in this respect.
+ 
+@@ -88,7 +88,7 @@
+ Ask the security subsystem for additional information about the
+ given logon session. The information is returned via hash pointer.
+ If there was a problem, there will be a special 'ERROR' and 'ERRORCODE' entries in the hash.
+-The following keys are returned if there is apropriate information available.
++The following keys are returned if there is appropriate information available.
+ 
+  UserName
+  LogonDomain
